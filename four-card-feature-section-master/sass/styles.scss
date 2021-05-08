@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+$bg--body:#fafafa;
+$light--text:#aaabb3;
+$bold--text:#4f4e5d;
+
+/* CARDS */
+$white:#ffffff;
+$cyan:#4fcdcd;
+$red:#d55c60;
+$orange:#f4ae56;
+$blue:#5a9ce5;
+
+body{
+    background: $bg--body;
+    font-family: 'Poppins', sans-serif;
+    // max-width: 1440px;
+}
+
+.header{
+    text-align: center;
+    padding: 50px 10px;
+    color: $light--text;
+
+    @media  screen and (min-width: 768px){
+        padding: 10px;
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.main-title{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: $bold--text;
+
+    @media  screen and (min-width: 768px){
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+}
+.main-title--bold{
+    font-weight: 600;
+}
+
+.cards{
+    display: grid;
+    padding: 0 30px;
+    
+    @media  screen and (min-width: 768px){
+        margin-top: 30px;
+        justify-content: center;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 250px);
+        grid-gap: 30px;
+    }
+}
+
+.card{
+    padding: 25px;
+    position: relative;
+    height: 210px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px #83a6d288;
+    border-radius: 5px 5px 0 0;
+}
+
+.card__title{
+    margin: 0;
+}
+
+.card__description{
+    color: $light--text;
+}
+
+.card--cyan{
+    border-top: 5px solid $cyan;
+
+    &::after{
+        content: url(../images/icon-supervisor.svg);
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+    @media  screen and (min-width: 768px){
+        margin-top: 100px;
+    }
+}
+
+.card--red{
+    border-top: 5px solid $red;
+
+    @media  screen and (min-width: 768px){
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    &::after{
+        content: url(../images/icon-team-builder.svg);
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+}
+
+.card--yellow{
+    border-top: 5px solid $orange;
+
+    @media  screen and (min-width: 768px){
+        margin-top: 15px;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    &::after{
+        content: url(../images/icon-karma.svg);
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+    
+}
+
+.card--blue{
+    border-top: 5px solid $blue;
+
+    @media  screen and (min-width: 768px){
+        grid-column: 3 / 4;
+        margin-top: 100px;
+    }
+
+    &::after{
+        content: url(../images/icon-calculator.svg);
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+    
+}

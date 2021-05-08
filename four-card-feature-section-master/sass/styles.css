@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* CARDS */
+body {
+  background: #fafafa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 50px 10px;
+  color: #aaabb3;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 10px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #4f4e5d;
+}
+
+@media screen and (min-width: 768px) {
+  .main-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+}
+
+.main-title--bold {
+  font-weight: 600;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  padding: 0 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    margin-top: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: (350px)[3];
+        grid-template-columns: repeat(3, 350px);
+    -ms-grid-rows: (250px)[2];
+        grid-template-rows: repeat(2, 250px);
+    grid-gap: 30px;
+  }
+}
+
+.card {
+  padding: 25px;
+  position: relative;
+  height: 210px;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0 10px 30px #83a6d288;
+          box-shadow: 0 10px 30px #83a6d288;
+  border-radius: 5px 5px 0 0;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__description {
+  color: #aaabb3;
+}
+
+.card--cyan {
+  border-top: 5px solid #4fcdcd;
+}
+
+.card--cyan::after {
+  content: url(../images/icon-supervisor.svg);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .card--cyan {
+    margin-top: 100px;
+  }
+}
+
+.card--red {
+  border-top: 5px solid #d55c60;
+}
+
+@media screen and (min-width: 768px) {
+  .card--red {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+}
+
+.card--red::after {
+  content: url(../images/icon-team-builder.svg);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.card--yellow {
+  border-top: 5px solid #f4ae56;
+}
+
+@media screen and (min-width: 768px) {
+  .card--yellow {
+    margin-top: 15px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+}
+
+.card--yellow::after {
+  content: url(../images/icon-karma.svg);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.card--blue {
+  border-top: 5px solid #5a9ce5;
+}
+
+@media screen and (min-width: 768px) {
+  .card--blue {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    margin-top: 100px;
+  }
+}
+
+.card--blue::after {
+  content: url(../images/icon-calculator.svg);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+/*# sourceMappingURL=styles.css.map */
